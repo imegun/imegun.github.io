@@ -14,15 +14,53 @@
       background: #0366d6; color: white;
       padding: 2rem 1rem; text-align: center;
     }
-    main { max-width: 720px; margin: 2rem auto; padding: 0 1rem; }
-    a.button {
-      display: inline-block; margin-top: 1rem;
-      padding: 0.75rem 1.5rem; background: #28a745;
-      color: white; text-decoration: none; border-radius: 4px;
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem 3rem;
+    }
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.25rem;
+      margin-top: 2rem;
+    }
+    h3 {
+      margin-bottom: 0.1rem;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-weight: 600;
+    }
+    .item-header span {
+      font-weight: 400;
+      font-size: 0.95rem;
+      color: #555;
+    }
+    ul {
+      margin-top: 0.3rem;
+      margin-bottom: 0.8rem;
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.25rem;
+    }
+    .subtext {
+      font-size: 0.95rem;
+      color: #555;
     }
     footer {
-      text-align: center; padding: 1rem; font-size: 0.875rem;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.875rem;
       color: #777;
+      border-top: 1px solid #e0e0e0;
+      background: #f2f2f2;
     }
   </style>
 </head>
@@ -32,12 +70,208 @@
   </header>
 
   <main>
-    <h2>Résumé</h2>
-    <p>You can view or download my résumé here:</p>
-    <a class="button" href="resume.pdf" target="_blank">Download PDF</a>
+    <section id="education">
+      <h2>Education</h2>
 
-    <h2>About Me</h2>
-    <p>Brief intro or links to projects, GitHub, LinkedIn, etc.</p>
+      <div class="item">
+        <div class="item-header">
+          <div>Boston College</div>
+          <span>2018–2022</span>
+        </div>
+        <div class="subtext">
+          Bachelor of Science in Biology (received May 23, 2022)  
+          <br>Double concentration in Bioinformatics, and Physiology &amp; Organismal Biology
+        </div>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>Choate Rosemary Hall</div>
+          <span>2014–2018</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="research-experience">
+      <h2>Research Experience</h2>
+
+      <div class="item">
+        <div class="item-header">
+          <div>Technical Associate, Massachusetts Institute of Technology</div>
+          <span>Aug 2022 – present</span>
+        </div>
+        <div class="subtext">
+          Department of Biological Engineering – Ernest Fraenkel Lab
+        </div>
+        <ul>
+          <li>Developed a Python pipeline for processing and quality-controlling large imaging datasets, fine-tuned the cell segmentation model using Cellpose, and optimized a CellProfiler pipeline for accurate single-cell feature extraction.</li>
+          <li>Investigated single-cell morphological features of iPSC-derived neurons grown under different stressor conditions with genetic knock-downs relevant to Huntington’s Disease, imaged at multiple timepoints.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>Visiting Researcher, Broad Institute of Harvard and MIT</div>
+          <span>Jun 2023 – present</span>
+        </div>
+        <div class="subtext">
+          Optical Profiling Platform / Sami Farhi Lab
+        </div>
+        <ul>
+          <li>Developed a workflow for processing raw Perturb-Seq files into count matrices, and a Python pipeline for visualizing perturbation effects for genes of interest at the single-cell level for an autism spectrum disorder project (comparing gene expression profiles of naturally occurring genetic variants in ASD patients to genetically perturbed variants in vitro).</li>
+          <li>Trained in iPSC cell culture, differentiation of iPSC into neurons using NGN2 induction, lentivirus packaging, lentivirus transduction, immunohistochemistry, and confocal imaging.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>Undergraduate Researcher, Dana-Farber Cancer Institute</div>
+          <span>Aug 2021 – Jun 2022</span>
+        </div>
+        <div class="subtext">
+          Department of Medical Oncology – Eliezer Van Allen Lab
+        </div>
+        <ul>
+          <li>Conducted bulk RNA-sequencing analysis investigating expression of transposable elements in responders versus non-responders of immune checkpoint therapy in pan-immunotherapy (PanIO) cancer cohorts, using Python and DESeq2 in R for differential expression analysis.</li>
+          <li>Provided research assistance in whole exome sequencing data processing of PanIO cohorts on Terra, an omics data processing platform developed by Broad Institute of MIT and Harvard.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>Undergraduate Research Fellow, Boston College</div>
+          <span>Feb 2020 – May 2022</span>
+        </div>
+        <div class="subtext">
+          Department of Biology – Christopher Kenaley Lab
+        </div>
+        <ul>
+          <li>Digitized skulls of the Stomiid genera to reconstruct hard anatomy and study how neurocranial shape has changed and how the fish have adapted physiologically in the deep sea through different prey sizes.</li>
+          <li>Utilized ImageJ and Slicer to wrangle data, visualize and reconstruct micro-CT scans of skulls, and used R to landmark and analyze skull morphospace via phylogenetic principal components analysis.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>Research in Evolutionary Genomics, Boston College</div>
+          <span>Aug 2020 – Dec 2020</span>
+        </div>
+        <div class="subtext">
+          Course taught by Professor Jeffrey DaCosta
+        </div>
+        <ul>
+          <li>Trained in preparing samples for next-generation DNA sequencing (DNA extraction, adapter ligation, PCR, SPRI bead cleanup).</li>
+          <li>Acquired additional Linux/Unix command-line skills and became proficient with a bioinformatic pipeline and tools for managing and analyzing large sequencing datasets.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>Research Intern, Boston Children’s Hospital</div>
+          <span>Jul 2021 – Dec 2021</span>
+        </div>
+        <div class="subtext">
+          Department of Gastroenterology – Wayne Lencer Lab
+        </div>
+        <ul>
+          <li>Trained in imaging lipids in cell membranes via STORM imaging (and its wet-lab preparation) and used Python to analyze data and detect endogenous and exogenous lipid trajectories on the cell membrane.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>Research Technician, Dana-Farber Cancer Institute</div>
+          <span>Feb 2021 – Jul 2021</span>
+        </div>
+        <div class="subtext">
+          Department of Cancer Immunology &amp; Virology – Carl Novina Lab
+        </div>
+        <ul>
+          <li>Conducted lncRNA research investigating the binding partnership between the CRNDE 204 isoform and selected proteins involved in erythropoiesis and myelopoiesis of K562 leukemic cells.</li>
+          <li>Trained in flow cytometry, tissue/mammalian cell culture, bacterial culture, transfection, Western blotting, SDS-PAGE, REMSA, ELISA, and qPCR.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>Research Intern, PCL, Inc., South Korea</div>
+          <span>Jun 2019 – Aug 2019</span>
+        </div>
+        <ul>
+          <li>Provided research assistance in developing blood screening immunoassay kits for HIV, HCV, and HBV.</li>
+          <li>Utilized sol-gel technology (improved from ELISA) to capture antibodies or antigens in silica structures for blood serum screening.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <div>Biomedical Engineering Summer Program, Columbia University</div>
+          <span>Jul 2017 – Aug 2017</span>
+        </div>
+        <div class="subtext">
+          Clark Hung and Chloe Bulinski
+        </div>
+        <ul>
+          <li>Explored stem cell research in organ regeneration using in vitro and in vivo approaches.</li>
+          <li>Used sol-gel technology to study encapsulation of pancreatic islets in the context of pancreatic stem cells.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Skills &amp; Languages</h2>
+      <ul>
+        <li><strong>Programming Languages:</strong> Python, R, Linux (command-line interface)</li>
+        <li><strong>Cloud Computing:</strong> Google Cloud Platform, Terra</li>
+        <li><strong>Software:</strong> ImageJ, CellProfiler, Cellpose, Slicer 3D, Arduino IDE</li>
+        <li><strong>Languages:</strong> English, Korean, French</li>
+      </ul>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching Experience</h2>
+      <div class="item">
+        <div class="item-header">
+          <div>Undergraduate Teaching Assistant, Boston College</div>
+        </div>
+        <ul>
+          <li>Molecules and Cells | BIOL2000 – Instructor: Laura Hake (Spring 2020–2021)</li>
+          <li>Physiology | BIOL3030 – Instructor: Christopher Kenaley (Fall 2021–2022)</li>
+          <li>Ecology and Evolution | BIOL2010 – Instructor: Jeffrey DaCosta (Spring 2021–2022)</li>
+        </ul>
+        <div class="subtext">
+          For all three positions: Ran office hours for students, created practice questions for exam preparation, and mentored students to be successful in class.
+        </div>
+      </div>
+    </section>
+
+    <section id="abstracts-presentations">
+      <h2>Abstracts &amp; Presentations</h2>
+      <ul>
+        <li>
+          First author on poster titled “Skull Shape Evolution in Deep-sea Dragonfishes,” presented at Hamilton Symposium Boston College 2022, Chestnut Hill, MA.  
+          <span class="subtext">Abstract accepted by Society for Integrative and Comparative Biology in 2021.</span>
+        </li>
+        <li>
+          Co-author on poster titled “Pooled optical, proteomic screening platform for iPSC-derived neurons for Huntington’s disease research,” presented at CHDI’s 18th Annual HD Therapeutics Conference 2023, Dubrovnik, Croatia.
+        </li>
+        <li>
+          Co-author on poster titled “Pooled Multimodal Profiling in Stem Cell-Derived Neural Cells,” presented at NIMH’s SSPsyGene Annual Consortium Meeting 2023, Rockville, MD.
+        </li>
+        <li>
+          Co-author on poster titled “Multiplexed immunofluorescence in brain tissue shows spatially variable, Alzheimer’s disease-associated changes in DNA damage,” presented at Broad Retreat 2023, Boston, MA.
+        </li>
+      </ul>
+    </section>
+
+    <section id="awards">
+      <h2>Awards &amp; Honors</h2>
+      <ul>
+        <li>National Finalist, United States National Chemistry Olympiad (2016)</li>
+        <li>Dean’s List First Honors, 2021–2022 (Boston College)</li>
+        <li>Dean’s List First Honors, 2020–2021 (Boston College)</li>
+      </ul>
+    </section>
   </main>
 
   <footer>
@@ -45,4 +279,5 @@
   </footer>
 </body>
 </html>
+
 
